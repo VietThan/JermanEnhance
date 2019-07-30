@@ -15,10 +15,10 @@
  *  limitations under the License.
  *
  *=========================================================================*/
-#ifndef itkHessianToObjectnessMeasureImageFilter_hxx
-#define itkHessianToObjectnessMeasureImageFilter_hxx
+#ifndef itkJermanObjectnessMeasureImageFilter_hxx
+#define itkJermanObjectnessMeasureImageFilter_hxx
 
-#include "itkHessianToObjectnessMeasureImageFilter.h"
+#include "itkJermanObjectnessMeasureImageFilter.h"
 #include "itkImageRegionIterator.h"
 #include "itkSymmetricEigenAnalysis.h"
 #include "itkProgressReporter.h"
@@ -31,8 +31,8 @@ namespace itk
 {
 
 template< typename TInputImage, typename TOutputImage >
-HessianToObjectnessMeasureImageFilter< TInputImage, TOutputImage >
-::HessianToObjectnessMeasureImageFilter()
+JermanObjectnessMeasureImageFilter< TInputImage, TOutputImage >
+::JermanToObjectnessMeasureImageFilter()
 
 {
   this->DynamicMultiThreadingOn();
@@ -40,7 +40,7 @@ HessianToObjectnessMeasureImageFilter< TInputImage, TOutputImage >
 
 template< typename TInputImage, typename TOutputImage >
 void
-HessianToObjectnessMeasureImageFilter< TInputImage, TOutputImage >
+JermanObjectnessMeasureImageFilter< TInputImage, TOutputImage >
 ::VerifyPreconditions() ITKv5_CONST
 {
   Superclass::VerifyPreconditions();
@@ -52,7 +52,7 @@ HessianToObjectnessMeasureImageFilter< TInputImage, TOutputImage >
 
 template< typename TInputImage, typename TOutputImage >
 void
-HessianToObjectnessMeasureImageFilter< TInputImage, TOutputImage >
+JermanObjectnessMeasureImageFilter< TInputImage, TOutputImage >
 ::DynamicThreadedGenerateData(const OutputImageRegionType & outputRegionForThread)
 {
   OutputImageType * output = this->GetOutput();
@@ -177,7 +177,7 @@ HessianToObjectnessMeasureImageFilter< TInputImage, TOutputImage >
 
 template< typename TInputImage, typename TOutputImage >
 void
-HessianToObjectnessMeasureImageFilter< TInputImage, TOutputImage >
+JermanObjectnessMeasureImageFilter< TInputImage, TOutputImage >
 ::PrintSelf(std::ostream & os, Indent indent) const
 {
   Superclass::PrintSelf(os, indent);
